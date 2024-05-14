@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/refined_master.css">
+    <link rel="FaviconIcon" href="favicon.ico" type="image/favicon-32x32.png">
+    <link rel="shortcut" href="favicon.ico" type="image/favicon-32x32.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taylor Vicente</title>
+</head>
+
+<body class="roboto-serif-forBars">
+    <div class="top-bar">
+        <div class="left-items">
+            <div class="logo"></div>
+            <div class="time">13:27</div>
+            <div class="location">SACRAMENTO, CA</div>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+
+    <div class="right-bar">
+        <div class="connect-text">CONNECT WITH ME</div>
+        <div class="social-icons">
+            <a href="https://www.github.com/taylorvicente" target="_blank">
+                <img src="images/github-logo.png" alt="Github" class="social-icon inverted-icon">
+            </a>
+            <a href="https://www.instagram.com/taylor.vcent" target="_blank">
+                <img src="images/Instagram_Glyph_White.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com/in/taylorvicente" target="_blank">
+                <img src="images/In-White-21@2x.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="mailto:taylorvicente03@gmail.com" target="_blank">
+                <img src="images/vecteezy_envelope-icon-in-black-colors-mail-signs-illustration_15117360.png"
+                    alt="Email" class="social-icon inverted-icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- Centered box content -->
+    <div class="center-box">
+        <h1><span class="roboto-serif-header">TAYLOR</span></h1>
+        <p><span class="roboto-serif-forBody">MECHANICAL ENGINEERING & </span>
+            <span class="roboto-serif-forBodySlant">almost</span>
+            <span class="roboto-serif-forBody">COMPUTER SCIENCE </span>
+        </p>
+        <h1><span class="roboto-serif-header">VICENTE</span></h1>
+    </div>
+
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            document.querySelector('.time').textContent = hours + ':' + minutes;
+        }
+        setInterval(updateTime, 1000); // Update the time every second
+
+        function toggleMenu() {
+            var menu = document.querySelector('.menu-icon');
+            menu.classList.toggle('active');
+        }
+        updateTime(); // Initial call to display the time immediately
+    </script>
+
+</body>
+
+<div class="svg-container">
+    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="opacity: 0.5; z-index: 0;">
+        <path d="M0,20 Q40,12 45,0" stroke="gray" stroke-width="0.5" fill="none" />
+    </svg>
+</div>
+<div class="svg-container">
+    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="opacity: 0.5; z-index: 1;">
+        <path d="M20,100 Q17.5,20 8.5,0" stroke="gray" stroke-width="0.5" fill="none" />
+    </svg>
+</div>
+<div class="svg-container">
+    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="opacity: 0.5; z-index: 1;">
+        <path d="M72.5,100 Q53.5,45 51.5,0" stroke="gray" stroke-width="0.5" fill="none" />
+    </svg>
+</div>
+<div class="svg-container">
+    <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="opacity: 0.5; z-index: 1;">
+        <path d="M55.5,100 Q73.5,87.5 90.5,0" stroke="gray" stroke-width="0.5" fill="none" />
+    </svg>
+</div>
+
+</html>
