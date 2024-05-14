@@ -1,0 +1,305 @@
+/* Cascading stylesheet for the website */
+
+/* Text inside these asterisks and slashes are comments for human */
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 100 to 900 */
+
+.roboto-serif-header {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 150,
+        "GRAD" 100;
+}
+
+.roboto-serif-forBody {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 50,
+        "GRAD" 50;
+}
+
+.roboto-serif-forBodySlant {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: italic;
+    font-variation-settings:
+        "wdth" 50,
+        "GRAD" 50;
+}
+
+.roboto-serif-forBars {
+    font-family: "Roboto Serif", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 150,
+        "GRAD" 100;
+}
+
+a {
+    /* set the text color to blue here */
+    color: lightgrey;
+    text-decoration: none;
+    /* This means we do not want hyperlinks to be underlined */
+}
+
+a:hover {
+    /* set the text color to red here */
+    color: gray;
+    text-decoration: none;
+    /* This means we do not want hyperlinks to be underlined */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    background-color: black;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* set the background color here */
+    /* set the text color to black here */
+    /* set the font here */
+    /* set the text alignment here */
+}
+
+.top-bar,
+.right-bar,
+.center-items {
+    display: fixed;
+    background-color: black;
+    color: white;
+}
+
+.top-bar {
+    top: 25px;
+    left: 50px;
+    right: 50px;
+    height: 50px;
+    /* Set the height of the top bar */
+    border-bottom: gray solid 1.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0%;
+    position: fixed;
+    z-index: 1000;
+    background: none;
+    /* Ensure the top bar is above the right bar */
+}
+
+.right-bar {
+    top: 80px;
+    /* Set this to the height of the top bar */
+    right: 50px;
+    width: 70px;
+    /* Adjust as needed */
+    height: calc(100% - 150px);
+    /* Full height minus the top bar height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px;
+    border-left: 1.5px solid gray;
+    position: fixed;
+    background: none;
+    z-index: 1000;
+}
+
+
+.connect-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icon {
+    height: 35px;
+    width: 35px;
+    /* Adjust size as needed */
+    margin-bottom: 0px;
+    /* Spacing between icons */
+}
+
+.inverted-icon {
+    filter: invert(100%);
+}
+
+/* Remove spacing from the last icon */
+.social-icon:last-child {
+    margin-bottom: 5px;
+}
+
+.social-icon:hover {
+    cursor: pointer;
+}
+
+.left-items {
+    display: flex;
+    align-items: center;
+}
+
+.logo,
+.time,
+.location,
+.menu-icon {
+    height: 100%;
+    /* Make the elements fill the bar's height */
+    display: flex;
+    align-items: center;
+    /* Center the content vertically */
+    justify-content: center;
+    /* Center the content horizontally */
+    padding: 0 15px;
+    /* Add some padding on the sides */
+}
+
+.logo,
+.time,
+.location {
+    border-right: 1.5px solid gray;
+    /* Add border to the right of the elements */
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    /* Adjust size as needed */
+    align-items: center;
+}
+
+.time,
+.location {
+    height: 40px;
+    font-size: larger;
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: 25px;
+    /* Width of the menu icon */
+    height: 40px;
+    /* Total height of the menu icon */
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    padding-left: 30.5px;
+    border-left: gray solid 1px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    background-color: #fff;
+    height: 2.5px;
+    /* Height of each bar */
+    width: 75%;
+    /* Full width of the menu icon */
+    position: absolute;
+    transition: 0.25s linear;
+}
+
+.bar1 {
+    top: 10px;
+}
+
+.bar2 {
+    top: 20px;
+}
+
+.bar3 {
+    top: 30px;
+}
+
+.menu-icon.active .menu-table {
+    /*for when menu is clicked*/
+    z-index: 5;
+
+}
+
+/* CSS for when the menu is active (class added via JavaScript) */
+.menu-icon.active .bar1 {
+    top: 18px;
+    transform: rotate(135deg);
+}
+
+.menu-icon.active .bar2 {
+    opacity: 0;
+    /* Hide the second bar */
+}
+
+.menu-icon.active .bar3 {
+    top: 18px;
+    transform: rotate(-135deg);
+}
+
+
+/* Add styles for the menu lines here */
+
+.center-box {
+    position: fixed;
+    /* Fixed position */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust for exact centering */
+    width: 80%;
+    /* Width of the box */
+    max-width: 800px;
+    /* Maximum width */
+    padding: 20px;
+    /* Padding inside the box */
+    z-index: 10;
+    /* Ensure it's above other elements */
+}
+
+.center-box h1 {
+    font-size: 4rem;
+    /* Large text size for the main heading */
+    font-stretch: wider;
+    color: #fff;
+    /* Text color */
+    margin: 1rem auto;
+    /* Space below the heading */
+}
+
+.center-box p {
+    font-size: 1.5rem;
+    /* Paragraph text size */
+    color: #fff;
+    /* Text color */
+    margin: 1rem auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #fff;
+    /* Border color */
+    background-color: #430d68;
+}
+
+.svg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
