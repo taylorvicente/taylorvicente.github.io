@@ -111,10 +111,10 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
-    border-left: 0.15rem solid gray;
     position: fixed;
     background: none;
     z-index: 1000;
+    border-left: gray solid 0.15rem;
 }
 
 
@@ -172,13 +172,6 @@ body {
     /* Add some padding on the sides */
 }
 
-.logo,
-.time,
-.location {
-    border-right: 0.15rem solid gray;
-    /* Add border to the right of the elements */
-}
-
 .logo {
     height: 1.35rem;
     width: 1.35rem;
@@ -203,7 +196,6 @@ body {
     transition: 0.5s ease-in-out;
     padding-left: 1.75rem;
     margin-bottom: 0.25rem;
-    border-left: gray solid 0.1rem;
 }
 
 .bar1,
@@ -263,8 +255,6 @@ body {
     left: 50%;
     /* Center horizontally */
     transform: translate(-50%, -50%);
-    /* Adjust for exact centering */
-    width: 80%;
     /* Width of the box */
     max-width: 800px;
     /* Maximum width */
