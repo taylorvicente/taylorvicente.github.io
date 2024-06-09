@@ -323,6 +323,7 @@ html, body {
     text-align: left;
     font-size: medium;
     margin: 1vw;
+    justify-items: center;
 }
 
 .homepage-image {
