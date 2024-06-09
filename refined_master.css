@@ -1,73 +1,54 @@
-/* Cascading stylesheet for the website */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wdth,GRAD@1,8..144,112.5,2&family=Shadows+Into+Light&display=swap" rel="stylesheet');
 
-/* Text inside these asterisks and slashes are comments for human */
-/* <uniquifier>: Use a unique and descriptive class name */
-/* <weight>: Use a value from 100 to 900 */
-
-.roboto-serif-header {
-    font-family: "Roboto Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 150,
-        "GRAD" 100;
-}
-
-.roboto-serif-forBody {
-    font-family: "Roboto Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 50,
-        "GRAD" 50;
-}
-
-.roboto-serif-forBodySlant {
-    font-family: "Roboto Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
+.italic-text {
+    font-family: "Shadows Into Light", cursive;
     font-style: italic;
-    font-variation-settings:
-        "wdth" 50,
-        "GRAD" 50;
-}
-
-.roboto-serif-forBars {
-    font-family: "Roboto Serif", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 150,
-        "GRAD" 100;
+    font-size: 2rem;
 }
 
 a {
-    /* set the text color to blue here */
-    color: lightgrey;
+    color: white;
     text-decoration: none;
-    /* This means we do not want hyperlinks to be underlined */
 }
 
 a:hover {
-    /* set the text color to red here */
     color: gray;
     text-decoration: none;
-    /* This means we do not want hyperlinks to be underlined */
 }
 
-body {
-    margin: 0;
-    padding: 0;
+/* Hover effect for menu items and social icons */
+.hover-effect {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.hover-effect::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background-color: #a468cc80;
+    /* #a468cc color with 50% opacity */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hover-effect:hover::before {
+    opacity: 1;
+}
+
+html, body {
+    font-family: 'Roboto Serif', serif;
+    height: 100%;
+    margin: 0;
 
     background-color: black;
     color: white;
     text-align: center;
-    overflow-x: hidden;
-    overflow-y: hidden;
     /* set the background color here */
     /* set the text color to black here */
     /* set the font here */
@@ -77,16 +58,17 @@ body {
 .top-bar,
 .right-bar,
 .center-items {
+    font-family: 'Roboto Serif', serif;
     display: fixed;
     background-color: black;
     color: white;
 }
 
 .top-bar {
-    top: 1.5rem;
-    left: 3rem;
-    right: 3rem;
-    height: 2.5rem;
+    top: 1.5vh;
+    left: 5vw;
+    right: 5vw;
+    height: 5vh;
     /* Set the height of the top bar */
     border-bottom: gray solid 0.15rem;
     display: flex;
@@ -94,15 +76,15 @@ body {
     align-items: center;
     padding: 0%;
     position: fixed;
-    z-index: 1000;
+    z-index: 1200;
     background: none;
     /* Ensure the top bar is above the right bar */
 }
 
 .right-bar {
-    top: 4.25rem;
+    top: 7.5vh;
     /* Set this to the height of the top bar */
-    right: 4.95rem;
+    left: calc(100vw - 5vw - 1.5rem);
     width: 2.5rem;
     /* Adjust as needed */
     height: 75%;
@@ -111,17 +93,17 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 0;
-    position: fixed;
+    position: absolute;
     background: none;
-    z-index: 1000;
+    z-index: 500;
     border-left: gray solid 0.15rem;
 }
-
 
 .connect-text {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     margin: auto;
+    padding-left: 1rem auto;
     font-size: 1.5rem;
 }
 
@@ -132,11 +114,12 @@ body {
 }
 
 .social-icon {
-    height: 1.25rem;
-    width: 1.25rem;
+    height: 1.5rem;
+    width: 1.5rem;
     /* Adjust size as needed */
-    margin-bottom: 0px;
+    margin-bottom: 1rem;
     /* Spacing between icons */
+    position: relative;
 }
 
 .inverted-icon {
@@ -148,10 +131,6 @@ body {
     margin-bottom: 1rem;
 }
 
-.social-icon:hover {
-    cursor: pointer;
-}
-
 .left-items {
     display: flex;
     align-items: center;
@@ -160,7 +139,8 @@ body {
 .logo,
 .time,
 .location,
-.menu-icon {
+.menu-icon,
+.menu-items {
     height: 100%;
     /* Make the elements fill the bar's height */
     display: flex;
@@ -168,109 +148,145 @@ body {
     /* Center the content vertically */
     justify-content: center;
     /* Center the content horizontally */
-    padding: 0 1.15rem;
+    padding: 0 1.5vw;
     /* Add some padding on the sides */
 }
 
 .logo {
-    height: 1.35rem;
-    width: 1.35rem;
+    max-height: 4vh;
+    max-width: auto;
     /* Adjust size as needed */
     align-items: center;
 }
 
+.logo:hover {
+    cursor: pointer;
+}
+
 .time,
-.location {
+.location,
+.menu-items {
     height: 2.25rem;
     font-size: larger;
 }
 
 .menu-icon {
+    justify-self: center;
+    align-self: center;
+    display: inline-flex;
     cursor: pointer;
-    width: 1.55rem;
+    max-width: 4vw;
     /* Width of the menu icon */
-    height: 2.75rem;
+    height: 3.5vh;
     /* Total height of the menu icon */
     position: relative;
+    align-items: center;
     transform: rotate(0deg);
-    transition: 0.5s ease-in-out;
-    padding-left: 1.75rem;
-    margin-bottom: 0.25rem;
+    z-index: 1200 !important;
+}
+
+.menu-items {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s linear 0.5s;
+    height: 2.25rem;
+    font-size: larger;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    right: 3vw;
+    position: absolute;
+    transform: translate(0, 9%)
+}
+
+.menu-items a {
+    padding: 1vw;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-items.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s, visbility 0s;
 }
 
 .bar1,
 .bar2,
 .bar3 {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
-    height: 2.5px;
+    height: 0.25vh;
     /* Height of each bar */
-    width: 75%;
+    width: 100%;
     /* Full width of the menu icon */
     position: absolute;
-    transition: 0.25s linear;
+    transition: 0.35s linear;
 }
 
 .bar1 {
-    top: 10px;
+    top: 0.9vh;
 }
 
 .bar2 {
-    top: 20px;
+    top: 1.5vh;
+    right: 0;
+    max-width: 100% !important;
+    transition: left 0.5s ease, max-width 0.5s ease, opacity 0.3s ease; /* Add transition for width and opacity */
+    opacity: 1; /* Initially visible */
 }
 
 .bar3 {
-    top: 30px;
-}
-
-.menu-icon.active .menu-table {
-    /*for when menu is clicked*/
-    z-index: 5;
-
+    top: 2.1vh;
 }
 
 /* CSS for when the menu is active (class added via JavaScript) */
 .menu-icon.active .bar1 {
-    top: 18px;
+    top: 1.65vh;
     transform: rotate(135deg);
+    transition: transform 0.5s ease;
 }
 
 .menu-icon.active .bar2 {
-    opacity: 0;
+    max-width: 0% !important; /* Shrink the width */
+    opacity: 0; /* Set opacity to 0 */
     /* Hide the second bar */
 }
 
 .menu-icon.active .bar3 {
-    top: 18px;
+    top: 1.65vh;
     transform: rotate(-135deg);
 }
-
 
 /* Add styles for the menu lines here */
 
 .center-box {
-    position: fixed;
+    position: relative;
     /* Fixed position */
-    top: 50%;
+    top: 40vh;
     /* Center vertically */
-    left: 50%;
+    left: 50vw;
     /* Center horizontally */
     transform: translate(-50%, -50%);
     /* Width of the box */
-    max-width: 800px;
+    max-width: min(70vw, 800px);
     /* Maximum width */
     padding: 20px;
     /* Padding inside the box */
     z-index: 10;
     /* Ensure it's above other elements */
+    align-items: center;
+    justify-content: center;
 }
 
 .center-box h1 {
-    font-size: 4rem;
+    text-align: center;
+    font-size: 7vh;
     /* Large text size for the main heading */
-    font-stretch: wider;
     color: #fff;
     /* Text color */
-    margin: 1rem auto;
+    margin: auto;
     /* Space below the heading */
 }
 
@@ -279,18 +295,107 @@ body {
     /* Paragraph text size */
     color: #fff;
     /* Text color */
-    margin: 1rem auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border: 1px solid #fff;
-    /* Border color */
+    margin: 0;
+    padding: 0.5rem;
+    padding-bottom: 0.75rem;
+    padding-top: 0.25rem;
+    border: 0.075rem solid #fff;
     background-color: #430d68;
+}
+
+.homepage-body-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Ensure items wrap to the next line if they don't fit */
+    justify-content: space-between;
+    position: relative;
+    top: 50vh;
+    max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    padding-right: 10vw;
+}
+
+.homepage-paragraph-text {
+    flex: 1; /* Allow the text to grow */
+    min-width: 300px; /* Ensure text has a minimum width */
+    text-align: left;
+    font-size: medium;
+    margin: 1vw;
+}
+
+.homepage-image {
+    max-width: 50%; /* Adjust based on preference */
+    height: auto;
+    object-fit: cover;
+    margin: 1vw;
+    z-index: 1500;
 }
 
 .svg-container {
     position: absolute;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     top: 0;
     left: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* device compatibility / screen size code */
+@media (max-width: 1175px) {
+    .menu-items {
+        display: none;
+    }
+
+    .menu-icon.active~.overlay {
+        display: block;
+    }
+
+    .menu-icon.active {
+        transform: scale(2);
+        transition: transform 0.5s ease-in;
+    }
+
+    .overlay.active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.5s, visbility 0s ease-in-out;
+        z-index: 800;
+    }
+}
+
+@media (max-width: 374px) {
+    .right-bar {
+        display: none;
+    }
+}
+
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0s linear 0.5s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #430d68;
+    z-index: 800;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 20px;
+    animation-delay: 0.4s;
+    animation: ease-in;
+    text-align: center;
+    font-size: 5vh;
+    z-index: 801;
 }

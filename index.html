@@ -4,24 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="refined_master.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit: yes">
+    <link rel="icon" href="Frame 1.png" type="image/x-icon">
+    <link rel="shortcut icon" href="Frame 1.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="name" content="Taylor Vicente">
     <title>Taylor Vicente</title>
+    <script src="homepage.js" defer></script>
 </head>
 
-<body class="roboto-serif-forBars">
+<body>
     <div class="top-bar">
         <div class="left-items">
-            <div class="logo"></div>
+            <a href="index.html" target="_blank">
+                <img src="Frame 1.png" alt="Logo" class="logo">
+            </a>
             <div class="time">13:27</div>
             <div class="location">SACRAMENTO, CA</div>
+        </div>
+        <div class="menu-items">
+            <div><a href="#about" class="hover-effect">ABOUT</a></div>
+            <div><a href="research.html" class="hover-effect">RESEARCH</a></div>
+            <div><a href="projects.html" class="hover-effect">PROJECTS</a></div>
+            <div><a href="photography.html" class="hover-effect">PHOTOGRAPHY</a></div>
+            <div><a href="connect.html" class="hover-effect">CONNECT</a></div>
         </div>
         <div class="menu-icon" onclick="toggleMenu()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
+        </div>
+    </div>
+
+    <div class="overlay">
+        <div class="overlay-content">
+            <div><a href="#about" class="hover-effect">ABOUT</a></div>
+            <div><a href="research.html" class="hover-effect">RESEARCH</a></div>
+            <div><a href="projects.html" class="hover-effect">PROJECTS</a></div>
+            <div><a href="photography.html" class="hover-effect">PHOTOGRAPHY</a></div>
+            <div><a href="connect.html" class="hover-effect">CONNECT</a></div>
         </div>
     </div>
 
@@ -46,30 +66,25 @@
 
     <!-- Centered box content -->
     <div class="center-box">
-        <h1><span class="roboto-serif-header">TAYLOR</span></h1>
-        <p><span class="roboto-serif-forBody">MECHANICAL ENGINEERING & </span>
-            <span class="roboto-serif-forBodySlant">almost</span>
-            <span class="roboto-serif-forBody">COMPUTER SCIENCE </span>
+        <h1>TAYLOR</h1>
+        <p>MECHANICAL ENGINEERING &
+            <span class="italic-text">almost</span>
+            COMPUTER SCIENCE
         </p>
-        <h1><span class="roboto-serif-header">VICENTE</span></h1>
+        <h1>VICENTE</h1>
     </div>
-
-    <script>
-        function updateTime() {
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            document.querySelector('.time').textContent = hours + ':' + minutes;
-        }
-        setInterval(updateTime, 1000); // Update the time every second
-
-        function toggleMenu() {
-            var menu = document.querySelector('.menu-icon');
-            menu.classList.toggle('active');
-        }
-        updateTime(); // Initial call to display the time immediately
-    </script>
-
+    <div class="homepage-body-container">
+        <div class="homepage-paragraph-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. In hac habitasse platea dictumst quisque sagittis purus sit amet. Maecenas
+                ultricies mi eget mauris. Ultrices vitae auctor eu augue ut lectus arcu bibendum. Laoreet id donec
+                ultrices tincidunt. Venenatis urna cursus eget nunc. Cras ornare arcu dui vivamus. Nisl pretium fusce id
+                velit ut tortor pretium viverra suspendisse. Scelerisque eu ultrices vitae auctor eu augue ut. Fermentum
+                dui faucibus in ornare. In hendrerit gravida rutrum quisque non tellus orci. Sit amet commodo nulla
+                facilisi nullam vehicula. Fermentum iaculis eu non diam phasellus vestibulum lorem sed.</p>
+        </div>
+        <img src="images/Purdue-Clocktower-KodakGold.JPG" alt="Purdue University Clock Tower" class="homepage-image">
+    </div>
 </body>
 
 <div class="svg-container">
