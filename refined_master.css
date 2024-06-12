@@ -41,7 +41,8 @@ a:hover {
     opacity: 1;
 }
 
-html, body {
+html,
+body {
     font-family: 'Roboto Serif', serif;
     height: 100%;
     margin: 0;
@@ -97,10 +98,6 @@ html, body {
     background: none;
     z-index: 500;
     border-left: gray solid 0.15rem;
-}
-
-.footer {
-    
 }
 
 .connect-text {
@@ -237,8 +234,10 @@ html, body {
     top: 1.5vh;
     right: 0;
     max-width: 100% !important;
-    transition: left 0.5s ease, max-width 0.5s ease, opacity 0.3s ease; /* Add transition for width and opacity */
-    opacity: 1; /* Initially visible */
+    transition: left 0.5s ease, max-width 0.5s ease, opacity 0.3s ease;
+    /* Add transition for width and opacity */
+    opacity: 1;
+    /* Initially visible */
 }
 
 .bar3 {
@@ -253,8 +252,10 @@ html, body {
 }
 
 .menu-icon.active .bar2 {
-    max-width: 0% !important; /* Shrink the width */
-    opacity: 0; /* Set opacity to 0 */
+    max-width: 0% !important;
+    /* Shrink the width */
+    opacity: 0;
+    /* Set opacity to 0 */
     /* Hide the second bar */
 }
 
@@ -310,28 +311,33 @@ html, body {
 .homepage-body-container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; /* Ensure items wrap to the next line if they don't fit */
+    flex-wrap: wrap;
+    /* Ensure items wrap to the next line if they don't fit */
     justify-content: space-between;
     position: relative;
     top: 50vh;
     max-width: 100%;
     padding-top: 0;
-    padding-bottom: 5vh;
+    padding-bottom: 7.5vh;
     padding-left: 5vw;
     padding-right: 10vw;
 }
 
 .homepage-paragraph-text {
-    flex: 1; /* Allow the text to grow */
-    min-width: 300px; /* Ensure text has a minimum width */
+    flex: 1;
+    /* Allow the text to grow */
+    min-width: 300px;
+    /* Ensure text has a minimum width */
     text-align: left;
     font-size: medium;
     margin: 1vw;
     justify-items: center;
 }
 
+.endbar-image,
 .homepage-image {
-    max-width: 50%; /* Adjust based on preference */
+    max-width: 50%;
+    /* Adjust based on preference */
     height: auto;
     object-fit: cover;
     margin: 1vw;
@@ -381,18 +387,22 @@ html, body {
 @media (max-width: 800px) {
     .homepage-body-container {
         flex-direction: column;
-        align-items: center; /* Center items horizontally */
-        text-align: center; /* Center text */
+        align-items: center;
+        /* Center items horizontally */
+        text-align: center;
+        /* Center text */
     }
 
     .homepage-image {
         max-width: 80%;
-        margin: 1vw auto; /* Center the image horizontally */
+        margin: 1vw auto;
+        /* Center the image horizontally */
     }
 
     .homepage-paragraph-text {
         text-align: left;
-        margin: 1vw 0; /* Add margin for spacing */
+        margin: 1vw 0;
+        /* Add margin for spacing */
     }
 }
 
@@ -422,4 +432,18 @@ html, body {
     text-align: center;
     font-size: 5vh;
     z-index: 801;
+}
+
+.bottom-bar {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 2000;
 }
