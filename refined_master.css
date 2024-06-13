@@ -341,7 +341,7 @@ body {
     height: auto;
     object-fit: cover;
     margin: 1vw;
-    z-index: 1500;
+    z-index: 700;
 }
 
 .svg-container {
@@ -445,5 +445,5 @@ body {
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    z-index: 2000;
+    z-index: 700;
 }

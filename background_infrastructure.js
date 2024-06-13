@@ -11,10 +11,18 @@ function toggleMenu() {
     menu.classList.toggle('active');
     
     var menuitems = document.querySelector('.menu-items');
-    menuitems.classList.toggle('active'); // Toggle the 'active' class for menu items
-
-    var overlay = document.querySelector('.overlay'); //toggles menu overlay when screen size is too small
-    overlay.classList.toggle('active');
+    var overlay = document.querySelector('.overlay');
+    
+    // Check scroll position
+    if (window.scrollY > 0) {
+        // If scrolled, toggle overlay menu
+        overlay.classList.toggle('active');
+        menuitems.classList.remove('active'); // Ensure regular menu-items are hidden
+    } else {
+        // If not scrolled, toggle regular menu
+        menuitems.classList.toggle('active');
+        overlay.classList.remove('active'); // Ensure overlay is hidden
+    }
 }
 
 updateTime(); // Initial call to display the time immediately
