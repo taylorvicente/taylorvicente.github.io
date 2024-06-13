@@ -446,4 +446,6 @@ body {
     justify-content: center;
     padding: 1rem;
     z-index: 700;
+    opacity: 0; /* Set initial opacity to 0 */
+    visibility: hidden; /* Set initial visibility to hidden */
 }
