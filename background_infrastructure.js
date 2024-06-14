@@ -34,7 +34,7 @@ document.addEventListener('scroll', function () {
     const rightBarOpacity = Math.max(1 - scrollPosition / fadeSpeed, 0);
     const topbarborder = Math.max(1 - scrollPosition / 215, 0);
     if (rightBarOpacity < 0.25) {
-        var overlay = document.querySelector('.overlay'); //toggles menu overlay when screen size is too small
+        var overlay = document.getElementsByClassName('.overlay');
         overlay.classList.toggle('active');
     }
 
