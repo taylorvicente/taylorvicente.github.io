@@ -17,7 +17,7 @@ function toggleMenu() {
     overlay.classList.toggle('active');
 
     if (overlay !== true) {
-        if (window.scrollY !== 0 && temp) {
+        if (window.scrollY !== 0) {
             overlay.classList.toggle('active');
         } else {
             // Toggle menu items when at the top of the page
