@@ -9,7 +9,7 @@ setInterval(updateTime, 1000); // Update the time every second
 function toggleMenu() {
     var menu = document.querySelector('.menu-icon');
     menu.classList.toggle('active');
-    
+
     var menuitems = document.querySelector('.menu-items');
     menuitems.classList.toggle('active'); // Toggle the 'active' class for menu items
 
@@ -19,7 +19,7 @@ function toggleMenu() {
 
 updateTime(); // Initial call to display the time immediately
 
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function () {
     const rightBar = document.querySelector('.right-bar');
     const topBar = document.querySelector('.top-bar');
     const time = document.querySelector('.left-items .time');
@@ -33,6 +33,11 @@ document.addEventListener('scroll', function() {
     const fadeSpeed = 250; // Adjust the fade speed as needed
     const rightBarOpacity = Math.max(1 - scrollPosition / fadeSpeed, 0);
     const topbarborder = Math.max(1 - scrollPosition / 215, 0);
+    if (rightBarOpacity < 0.25) {
+        var overlay = document.querySelector('.overlay'); //toggles menu overlay when screen size is too small
+        overlay.classList.toggle('active');
+    }
+
     rightBar.style.opacity = rightBarOpacity.toString();
     time.style.opacity = rightBarOpacity.toString();
     location.style.opacity = rightBarOpacity.toString();
