@@ -15,6 +15,18 @@ function toggleMenu() {
 
     var overlay = document.querySelector('.overlay'); //toggles menu overlay when screen size is too small
     overlay.classList.toggle('active');
+    var temp = true;
+
+    if (window.scrollY !== 0 && temp) {
+        overlay.classList.toggle('active');
+        overlay.classList.toggle('active');
+    } else if (window.scrollY !== 0 && !temp) {
+        overlay.classList.toggle('active');
+    } else {
+        // Toggle menu items when at the top of the page
+        var menuitems = document.querySelector('.menu-items');
+        menuitems.classList.toggle('active');
+    }
 }
 
 updateTime(); // Initial call to display the time immediately
@@ -37,6 +49,15 @@ document.addEventListener('scroll', function () {
     time.style.opacity = rightBarOpacity.toString();
     location.style.opacity = rightBarOpacity.toString();
     topBar.style.borderBottom = 'gray solid ' + (topbarborder * 0.15) + 'rem';
+    if (rightBarOpacity <= 0) {
+        rightBar.style.display = 'none';
+        time.style.display = 'none';
+        location.style.display = 'none';
+    } else {
+        rightBar.style.display = 'flex';
+        time.style.display = 'flex';
+        location.style.display = 'flex';
+    }
 
     // Show bottom bar when scrolled to 95% of the page
     const bottomBar = document.querySelector('.bottom-bar');
