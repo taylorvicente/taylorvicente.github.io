@@ -34,8 +34,10 @@ document.addEventListener('scroll', function () {
     const rightBarOpacity = Math.max(1 - scrollPosition / fadeSpeed, 0);
     const topbarborder = Math.max(1 - scrollPosition / 215, 0);
     if (rightBarOpacity < 0.25) {
-        var overlay = document.getElementsByClassName('overlay');
-        overlay.classList.toggle('active');
+        var overlay = document.getElementsByClassName('overlay')[0];
+        if (overlay) {
+            overlay.classList.toggle('active');
+        }
     }
 
     rightBar.style.opacity = rightBarOpacity.toString();
