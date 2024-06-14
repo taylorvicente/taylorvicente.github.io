@@ -37,12 +37,6 @@ document.addEventListener('scroll', function () {
     time.style.opacity = rightBarOpacity.toString();
     location.style.opacity = rightBarOpacity.toString();
     topBar.style.borderBottom = 'gray solid ' + (topbarborder * 0.15) + 'rem';
-    if (rightBarOpacity < 0.25) {
-        var overlay = document.getElementsByClassName('overlay')[0];
-        if (overlay) {
-            overlay.classList.toggle('active');
-        }
-    }
 
     // Show bottom bar when scrolled to 95% of the page
     const bottomBar = document.querySelector('.bottom-bar');
