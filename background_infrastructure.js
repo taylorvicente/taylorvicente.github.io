@@ -15,17 +15,20 @@ function toggleMenu() {
 
     var overlay = document.querySelector('.overlay'); //toggles menu overlay when screen size is too small
     overlay.classList.toggle('active');
-    var temp = true;
 
-    if (window.scrollY !== 0 && temp) {
-        overlay.classList.toggle('active');
-        overlay.classList.toggle('active');
-    } else if (window.scrollY !== 0 && !temp) {
-        overlay.classList.toggle('active');
-    } else {
-        // Toggle menu items when at the top of the page
-        var menuitems = document.querySelector('.menu-items');
-        menuitems.classList.toggle('active');
+    if (overlay !== true) {
+        var temp = true;
+
+        if (window.scrollY !== 0 && temp) {
+            overlay.classList.toggle('active');
+            overlay.classList.toggle('active');
+        } else if (window.scrollY !== 0 && !temp) {
+            overlay.classList.toggle('active');
+        } else {
+            // Toggle menu items when at the top of the page
+            var menuitems = document.querySelector('.menu-items');
+            menuitems.classList.toggle('active');
+        }
     }
 }
 
