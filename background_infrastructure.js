@@ -33,17 +33,16 @@ document.addEventListener('scroll', function () {
     const fadeSpeed = 250; // Adjust the fade speed as needed
     const rightBarOpacity = Math.max(1 - scrollPosition / fadeSpeed, 0);
     const topbarborder = Math.max(1 - scrollPosition / 215, 0);
+    rightBar.style.opacity = rightBarOpacity.toString();
+    time.style.opacity = rightBarOpacity.toString();
+    location.style.opacity = rightBarOpacity.toString();
+    topBar.style.borderBottom = 'gray solid ' + (topbarborder * 0.15) + 'rem';
     if (rightBarOpacity < 0.25) {
         var overlay = document.getElementsByClassName('overlay')[0];
         if (overlay) {
             overlay.classList.toggle('active');
         }
     }
-
-    rightBar.style.opacity = rightBarOpacity.toString();
-    time.style.opacity = rightBarOpacity.toString();
-    location.style.opacity = rightBarOpacity.toString();
-    topBar.style.borderBottom = 'gray solid ' + (topbarborder * 0.15) + 'rem';
 
     // Show bottom bar when scrolled to 95% of the page
     const bottomBar = document.querySelector('.bottom-bar');
