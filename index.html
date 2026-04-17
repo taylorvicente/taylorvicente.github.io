@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- EDIT: site title and meta description (add <meta name="description" content="..."> for search & sharing) -->
+<title>Precision Engineering Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!--
+  PORTFOLIO_CONFIG (edit values here; search the repo for this block)
+  display_name: Taylor Vicente
+  contact_email: taylorvicent03@gmain.com
+  social_linkedin: https://www.linkedin.com/in/taylorvicente/
+  social_github: https://github.com/tvicent
+-->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#0c0f10",
+                        "on-primary-container": "#455364",
+                        "on-background": "#2b3437",
+                        "surface-container-highest": "#dbe4e7",
+                        "error-container": "#fe8983",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#2f4155",
+                        "on-secondary": "#f7f9ff",
+                        "on-primary-fixed": "#334051",
+                        "on-tertiary-container": "#415368",
+                        "error-dim": "#4e0309",
+                        "secondary-fixed": "#d1e4ff",
+                        "surface-container": "#eaeff1",
+                        "tertiary-fixed-dim": "#c3d6ef",
+                        "on-primary-fixed-variant": "#4f5d6e",
+                        "surface-container-high": "#e3e9ec",
+                        "primary-fixed-dim": "#c8d5ea",
+                        "error": "#9f403d",
+                        "primary-dim": "#465365",
+                        "primary": "#525f71",
+                        "secondary-fixed-dim": "#bdd7f9",
+                        "on-tertiary-fixed-variant": "#4b5d72",
+                        "on-surface-variant": "#586064",
+                        "surface-tint": "#525f71",
+                        "surface-variant": "#dbe4e7",
+                        "tertiary-container": "#d1e4fe",
+                        "tertiary": "#4f6176",
+                        "on-surface": "#2b3437",
+                        "surface-dim": "#d1dce0",
+                        "tertiary-dim": "#43556a",
+                        "primary-fixed": "#d6e4f9",
+                        "on-error": "#fff7f6",
+                        "on-secondary-fixed": "#27415d",
+                        "on-tertiary": "#f7f9ff",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#48617e",
+                        "secondary-container": "#d1e4ff",
+                        "background": "#f8f9fa",
+                        "on-secondary-container": "#3a5470",
+                        "outline": "#737c7f",
+                        "secondary-dim": "#3c5572",
+                        "inverse-on-surface": "#9b9d9e",
+                        "outline-variant": "#abb3b7",
+                        "primary-container": "#d6e4f9",
+                        "on-error-container": "#752121",
+                        "on-primary": "#f5f8ff",
+                        "surface": "#f8f9fa",
+                        "inverse-primary": "#d8e6fc",
+                        "on-secondary-fixed-variant": "#445d7b",
+                        "surface-container-low": "#f1f4f6",
+                        "tertiary-fixed": "#d1e4fe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #2b3437; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .ambient-shadow {
+            box-shadow: 0 20px 40px rgba(43, 52, 55, 0.05);
+        }
+        .ghost-border {
+            border: 1px solid rgba(171, 179, 183, 0.2);
+        }
+        .bg-gradient-cta {
+            background: linear-gradient(45deg, #525f71, #465365);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar: active page = PROJECTS (this file) -->
+<nav class="bg-surface/80 backdrop-blur-[24px] top-0 z-50 flex flex-col w-full max-w-full sticky">
+<div class="flex justify-between items-center w-full px-8 py-6">
+<a class="text-xl font-bold tracking-[0.2em] text-on-surface font-headline uppercase shrink-0" href="index.html">TAYLOR_VICENTE</a>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-headline tracking-tighter uppercase font-bold text-on-surface border-b-2 border-on-surface pb-1 opacity-70 transition-opacity duration-150" href="index.html#projects">PROJECTS</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface transition-colors hover:bg-surface-variant/50 px-3 py-2" href="research.html">RESEARCH</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface transition-colors hover:bg-surface-variant/50 px-3 py-2" href="about.html">ABOUT</a>
+</div>
+<a class="hidden md:inline-flex bg-gradient-cta text-on-primary font-headline tracking-tighter uppercase font-bold px-8 py-3 hover:opacity-90 transition-opacity shrink-0" href="about.html#contact">CONTACT</a>
+<button type="button" id="nav-toggle" class="md:hidden text-on-surface p-2 -mr-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden flex flex-col gap-4 px-8 pb-6 border-t border-outline/10 bg-surface/95 backdrop-blur-[24px]" role="navigation">
+<a class="font-headline tracking-tighter uppercase font-bold text-on-surface border-b-2 border-on-surface pb-1 w-fit opacity-70" href="index.html#projects">PROJECTS</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface py-1" href="research.html">RESEARCH</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface py-1" href="about.html">ABOUT</a>
+<a class="inline-flex bg-gradient-cta text-on-primary font-headline tracking-tighter uppercase font-bold px-8 py-3 hover:opacity-90 transition-opacity w-fit" href="about.html#contact">CONTACT</a>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[870px] flex items-center bg-background overflow-hidden px-8 md:px-16 lg:px-24">
+<div class="absolute inset-0 pointer-events-none grid grid-cols-12 gap-4 h-full opacity-10">
+<div class="col-span-1 border-r border-outline"></div>
+<div class="col-span-1 border-r border-outline hidden md:block"></div>
+<div class="col-span-1 border-r border-outline hidden lg:block"></div>
+</div>
+<div class="relative z-10 max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center w-full">
+<div class="md:col-span-8 lg:col-span-9 md:col-start-3">
+<!-- EDIT: hero eyebrow / discipline line -->
+<div class="font-label text-sm uppercase tracking-[0.15em] text-secondary mb-6 flex items-center gap-4">
+<span class="w-12 h-px bg-secondary"></span>
+                        Mechanical &amp; Systems Engineering
+                    </div>
+<!-- EDIT: hero headline and subhead -->
+<h1 class="font-headline text-[3rem] md:text-[4rem] lg:text-[5rem] leading-[1.1] tracking-[-0.02em] font-bold text-on-surface mb-8">
+                        Precision Engineering <br/>
+<span class="text-primary">&amp; Multi-Disciplinary Design</span>
+</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-2xl leading-[1.6] mb-12">
+                        Specializing in the intersection of advanced mechanical systems, automated electrical controls, and robust software architecture. Translating complex theoretical models into highly functional, machined realities.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<a class="bg-gradient-cta text-on-primary font-headline text-sm uppercase tracking-[0.1em] font-bold px-8 py-4 inline-flex items-center gap-3 hover:opacity-90 transition-opacity" href="#projects">
+                            View Specs
+                            <span class="material-symbols-outlined text-sm">arrow_downward</span>
+</a>
+<a class="ghost-border text-on-surface font-headline text-sm uppercase tracking-[0.1em] font-bold px-8 py-4 inline-flex items-center gap-3 hover:bg-surface-container-low transition-colors" href="about.html">
+                            Technical Resume
+                        </a>
+</div>
+</div>
+</div>
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-[120%] bg-surface-container-low -z-10 skew-x-[-15deg] hidden lg:block border-l border-outline/20"></div>
+</section>
+<!-- Project Highlights Grid -->
+<section class="bg-surface-container-low w-full py-32 px-8 md:px-16 lg:px-24" id="projects">
+<div class="max-w-7xl mx-auto">
+<!-- EDIT: section label and heading -->
+<div class="mb-24 md:pl-24">
+<span class="font-label text-sm uppercase tracking-[0.15em] text-secondary block mb-4">01 // Selected Works</span>
+<h2 class="font-headline text-3xl md:text-4xl lg:text-5xl tracking-tight font-bold text-on-surface">Systems Architecture &amp; <br/>Applied Mechanics</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
+<!-- EDIT: project card — featured project: title, body, chips, CTA href, image src + alt -->
+<article class="lg:col-span-12 bg-surface-container-lowest ambient-shadow relative overflow-hidden group">
+<div class="grid grid-cols-1 md:grid-cols-2 h-full">
+<div class="p-10 md:p-16 flex flex-col justify-center order-2 md:order-1">
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold">MECHATRONICS</span>
+<span class="bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold">SYSTEMS</span>
+</div>
+<h3 class="font-headline text-3xl font-bold text-on-surface mb-4">Autonomous Retrieval Drone</h3>
+<p class="font-body text-on-surface-variant leading-[1.6] mb-8 text-lg">
+                                    A fully integrated robotics platform combining structural composite chassis design, custom BLDC motor controllers, and real-time pathfinding algorithms. Designed for high-stress industrial environments.
+                                </p>
+<a class="font-headline text-sm uppercase tracking-[0.1em] text-primary font-bold inline-flex items-center gap-2 hover:text-on-surface transition-colors mt-auto" href="#">
+                                    Analyze System <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="h-[400px] md:h-auto order-1 md:order-2 bg-surface-container-high relative">
+<!-- EDIT: image — replace src and alt -->
+<img alt="Complex robotics arm assembly" class="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-700" data-alt="industrial robotic arm mechanism close up showing gears wiring and machined metal parts in dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJT0FqJIlDbmXyU7zfz_5SMVbCihQC6A9YYygoNE1krfY0jGrMxizoADjD-2JIl8ND7x6W9o70iJD6UwBGtlCf6P9fATBT_LbjnJ1KiadJgw08yagNuYAkQniWL63NPjBPxfI5sGhw6Vz9Pt_II1icbIlJ3YjmomHh99RtTzXyS6x9qP7Iax18uzmE7Eamfq1H9cFdujilzwTEDcn1T2ekyvxhAf357NJaFYw_42n-A3SkyQX2cxZX1cl-Zutsk3wA-CosI7OdiHI"/>
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik0wIDM5LjVoNDBWMG0tMzkuNSAwdjQwaDQwIiBzdHJva2U9IiNhYmIzYjciIHN0cm9rZS13aWR0aD0iMC41IiBmaWxsPSJub25lIiBvcGFjaXR5PSIwLjMiLz48L3N2Zz4=')] opacity-50 pointer-events-none"></div>
+</div>
+</div>
+</article>
+<!-- EDIT: project card — turbofan case study -->
+<article class="lg:col-span-5 bg-surface-container-lowest ambient-shadow p-10 flex flex-col h-[500px] relative group overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-high -z-10">
+<!-- EDIT: image — replace src and alt -->
+<img alt="Mechanical turbine rendering" class="w-full h-full object-cover mix-blend-multiply opacity-20 group-hover:opacity-40 transition-opacity duration-500" data-alt="wireframe CAD render of a complex turbine engine glowing blue on a dark background technical blueprint style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmDF2xoP-X9mUBt8LnzcVXfLtyLE10PkQim90Id4qEL-vnQAhUNevEpd-AdaLq41NrKrSxrDige-gzsslrasou_K_ehrsnC3R4GQAFftBDagV0GW03N_scPDyg0YGAu3bZI6AO06MxnilXL22hfQXmj4Mg_6wo-AMh2f-pKEgosWFrbLAAgKWds1ZiQer5xgsYRvYKUJrlTbVqtCtIgdj0aZEQ6EfBELb3SR7Jz0j8_n2ZPHgRIgX8njcjWmDU-vl53Ax6UkqPiDA"/>
+</div>
+<div class="flex flex-wrap gap-2 mb-8 relative z-10">
+<span class="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">THERMAL</span>
+<span class="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">CAD</span>
+</div>
+<h3 class="font-headline text-2xl font-bold text-on-surface mb-4 relative z-10">High-Bypass Turbofan Stress Analysis</h3>
+<p class="font-body text-on-surface-variant leading-[1.6] relative z-10">
+                            Finite Element Analysis (FEA) and computational fluid dynamics (CFD) modeling to optimize the structural integrity of titanium fan blades under extreme thermal loads.
+                        </p>
+<a class="font-headline text-sm uppercase tracking-[0.1em] text-on-surface font-bold inline-flex items-center gap-2 hover:opacity-70 transition-opacity mt-auto relative z-10" href="high_bypass_turbofan_stress_analysis/index.html">
+                            View Technical Data <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</article>
+<div class="lg:col-span-7 grid grid-rows-2 gap-8 md:gap-12">
+<!-- EDIT: project card — PCB -->
+<article class="bg-surface-container-lowest ambient-shadow p-10 flex flex-col md:flex-row gap-8 items-center relative overflow-hidden group">
+<div class="flex-1 order-2 md:order-1 relative z-10">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">PCB DESIGN</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-3">Modular Telemetry Board</h3>
+<p class="font-body text-on-surface-variant leading-[1.6] text-sm">
+                                    Custom 6-layer PCB integrating high-frequency RF transmission and analog sensor conditioning for remote structural monitoring.
+                                </p>
+</div>
+<div class="w-full md:w-[250px] h-[200px] bg-surface-container-high order-1 md:order-2 shrink-0">
+<!-- EDIT: image — replace src and alt -->
+<img alt="Circuit board close up" class="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:mix-blend-normal transition-all duration-500" data-alt="macro photography of a green printed circuit board with dense microchips and gold traces sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8ei55MxrVUi1EOXVAP-aLiHmgJD8BtiANoVs77qZTzSCtyNToeSrYDDh3rnLpE6fuatY-da9AfEiUdSelmqjYuq6-xXbs-60foA-TORhEvkgFmSdTWMGo_fTX5RfIri2PUPQniEQPvJaWxij0BkhVsKi-I7hdSLZUpEymEK7aEiwEikcXHIEhZn5fLjd4jXMxfEEvnb86u_BQH4Hjo6VBG5V-NpFVWQEvgX3N2TgTvWzxSFVEgjGYEoYfCyGkLlPPv7Ej6OxjBL0"/>
+</div>
+</article>
+<!-- EDIT: project card — software -->
+<article class="bg-surface-container-lowest ambient-shadow p-10 flex flex-col md:flex-row gap-8 items-center relative overflow-hidden group">
+<div class="w-full md:w-[250px] h-[200px] bg-inverse-surface order-1 shrink-0">
+<!-- EDIT: image — replace src and alt -->
+<img alt="Code screen" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-all duration-500" data-alt="computer screen displaying complex c++ code for embedded systems on a dark background glowing green text" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC532HCH8r6pGM0_ZzcWr_z1qIUw97nJ5jVhxlUz4W9Etvu3_N-sN7hzduLoQKTkyWHrMIl3ZGGUgh2HWiPXMWL-M6h5KJtuQ41l15bA-T6lFU0GJovWA8v0kiUf-oZameGf67xjQMMtnLpsRoexgsZ63bjBYls2cvgeHFYeytqJxQt10bVq_aS-weZJyaFaU6F9eFuFoym4YPD_KyLKcchgjHUxMCSbbyz8Ivqw_jTgW85lrNF7DjnRoXrvi38b8NLqDQF-GrJV6o"/>
+</div>
+<div class="flex-1 order-2 relative z-10">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">EMBEDDED C++</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-3">PID Control Algorithm</h3>
+<p class="font-body text-on-surface-variant leading-[1.6] text-sm">
+                                    Developed a deterministic RTOS software architecture implementing advanced PID tuning for sub-millimeter actuator precision.
+                                </p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- EDIT: footer — brand line, copyright year, social URLs -->
+<footer class="bg-surface-dim w-full px-12 py-16 flex flex-col md:flex-row justify-between items-start tonal-shift via-surface-dim flat no-shadows full-width border-none">
+<div class="mb-12 md:mb-0">
+<div class="text-sm font-bold text-on-surface font-headline tracking-[0.2em] uppercase mb-4">
+                TAYLOR_VICENTE
+            </div>
+<div class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant">
+                ©2026 TAYLOR VICENTE // ALL RIGHTS RESERVED
+            </div>
+</div>
+<div class="flex flex-col space-y-4 md:items-end">
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">LINKEDIN</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">GITHUB</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">INSTITUTE_OF_MECHANICAL_ENGINEERS</a>
+</div>
+</footer>
+<script>
+(function () {
+  var toggle = document.getElementById('nav-toggle');
+  var menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    var isOpen = !menu.classList.contains('hidden');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+})();
+</script>
+</body>
+</html>

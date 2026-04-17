@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- EDIT: page title and meta description -->
+<title>Research — Precision Engineering Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!--
+  PORTFOLIO_CONFIG (edit values here; search the repo for this block)
+  display_name: Taylor Vicente
+  contact_email: taylorvicent03@gmain.com
+  social_linkedin: https://www.linkedin.com/in/taylorvicente/
+  social_github: https://github.com/tvicent
+-->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#0c0f10",
+                        "on-primary-container": "#455364",
+                        "on-background": "#2b3437",
+                        "surface-container-highest": "#dbe4e7",
+                        "error-container": "#fe8983",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#2f4155",
+                        "on-secondary": "#f7f9ff",
+                        "on-primary-fixed": "#334051",
+                        "on-tertiary-container": "#415368",
+                        "error-dim": "#4e0309",
+                        "secondary-fixed": "#d1e4ff",
+                        "surface-container": "#eaeff1",
+                        "tertiary-fixed-dim": "#c3d6ef",
+                        "on-primary-fixed-variant": "#4f5d6e",
+                        "surface-container-high": "#e3e9ec",
+                        "primary-fixed-dim": "#c8d5ea",
+                        "error": "#9f403d",
+                        "primary-dim": "#465365",
+                        "primary": "#525f71",
+                        "secondary-fixed-dim": "#bdd7f9",
+                        "on-tertiary-fixed-variant": "#4b5d72",
+                        "on-surface-variant": "#586064",
+                        "surface-tint": "#525f71",
+                        "surface-variant": "#dbe4e7",
+                        "tertiary-container": "#d1e4fe",
+                        "tertiary": "#4f6176",
+                        "on-surface": "#2b3437",
+                        "surface-dim": "#d1dce0",
+                        "tertiary-dim": "#43556a",
+                        "primary-fixed": "#d6e4f9",
+                        "on-error": "#fff7f6",
+                        "on-secondary-fixed": "#27415d",
+                        "on-tertiary": "#f7f9ff",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#48617e",
+                        "secondary-container": "#d1e4ff",
+                        "background": "#f8f9fa",
+                        "on-secondary-container": "#3a5470",
+                        "outline": "#737c7f",
+                        "secondary-dim": "#3c5572",
+                        "inverse-on-surface": "#9b9d9e",
+                        "outline-variant": "#abb3b7",
+                        "primary-container": "#d6e4f9",
+                        "on-error-container": "#752121",
+                        "on-primary": "#f5f8ff",
+                        "surface": "#f8f9fa",
+                        "inverse-primary": "#d8e6fc",
+                        "on-secondary-fixed-variant": "#445d7b",
+                        "surface-container-low": "#f1f4f6",
+                        "tertiary-fixed": "#d1e4fe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "0px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8f9fa; color: #2b3437; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+        .ambient-shadow { box-shadow: 0 20px 40px rgba(43, 52, 55, 0.05); }
+        .ghost-border { border: 1px solid rgba(171, 179, 183, 0.2); }
+        .bg-gradient-cta { background: linear-gradient(45deg, #525f71, #465365); }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar: active = RESEARCH -->
+<nav class="bg-surface/80 backdrop-blur-[24px] top-0 z-50 flex flex-col w-full max-w-full sticky">
+<div class="flex justify-between items-center w-full px-8 py-6">
+<a class="text-xl font-bold tracking-[0.2em] text-on-surface font-headline uppercase shrink-0" href="index.html">TAYLOR_VICENTE</a>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface transition-colors hover:bg-surface-variant/50 px-3 py-2" href="index.html#projects">PROJECTS</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-on-surface border-b-2 border-on-surface pb-1 opacity-70 transition-opacity duration-150" href="research.html">RESEARCH</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface transition-colors hover:bg-surface-variant/50 px-3 py-2" href="about.html">ABOUT</a>
+</div>
+<a class="hidden md:inline-flex bg-gradient-cta text-on-primary font-headline tracking-tighter uppercase font-bold px-8 py-3 hover:opacity-90 transition-opacity shrink-0" href="about.html#contact">CONTACT</a>
+<button type="button" id="nav-toggle" class="md:hidden text-on-surface p-2 -mr-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-menu" class="hidden md:hidden flex flex-col gap-4 px-8 pb-6 border-t border-outline/10 bg-surface/95 backdrop-blur-[24px]" role="navigation">
+<a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface py-1" href="index.html#projects">PROJECTS</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-on-surface border-b-2 border-on-surface pb-1 w-fit opacity-70" href="research.html">RESEARCH</a>
+<a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface py-1" href="about.html">ABOUT</a>
+<a class="inline-flex bg-gradient-cta text-on-primary font-headline tracking-tighter uppercase font-bold px-8 py-3 hover:opacity-90 transition-opacity w-fit" href="about.html#contact">CONTACT</a>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- EDIT: page hero -->
+<section class="relative w-full bg-background px-8 md:px-16 lg:px-24 pt-16 pb-20 md:pt-24 md:pb-28">
+<div class="max-w-5xl">
+<span class="font-label text-sm uppercase tracking-[0.15em] text-secondary block mb-4">02 // Research</span>
+<h1 class="font-headline text-[2.5rem] md:text-[3.5rem] leading-[1.1] tracking-[-0.02em] font-bold text-on-surface mb-6">
+                Publications &amp; <span class="text-primary">Laboratory Work</span>
+            </h1>
+<p class="font-body text-lg text-on-surface-variant max-w-3xl leading-[1.6]">
+<!-- EDIT: research page intro paragraph -->
+                Summaries of peer-reviewed work, technical reports, and ongoing investigations. Replace this paragraph with your focus areas and institutional affiliations.
+            </p>
+</div>
+</section>
+<!-- EDIT: Publications section — titles, venues, years, links -->
+<section class="bg-surface-container-low w-full py-20 px-8 md:px-16 lg:px-24">
+<div class="max-w-7xl mx-auto">
+<span class="font-label text-sm uppercase tracking-[0.15em] text-secondary block mb-4">Section A</span>
+<h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mb-12">Publications</h2>
+<div class="space-y-16">
+<article class="bg-surface-container-lowest ambient-shadow p-10 md:p-12">
+<h3 class="font-headline text-xl font-bold text-on-surface mb-3">Paper or report title (placeholder)</h3>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-4">Venue · Year</p>
+<p class="font-body text-on-surface-variant leading-[1.6] mb-6">
+                        Abstract or contribution summary. Edit this block and add a DOI or PDF link when available.
+                    </p>
+<a class="font-headline text-sm uppercase tracking-[0.1em] text-primary font-bold inline-flex items-center gap-2 hover:text-on-surface transition-colors" href="#">Read summary <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</article>
+<article class="bg-background p-10 md:p-12">
+<h3 class="font-headline text-xl font-bold text-on-surface mb-3">Second publication (placeholder)</h3>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-4">Journal · Year</p>
+<p class="font-body text-on-surface-variant leading-[1.6]">
+                        Short description of methods and results.
+                    </p>
+</article>
+</div>
+</div>
+</section>
+<!-- EDIT: In progress — replace bullets -->
+<section class="bg-background w-full py-20 px-8 md:px-16 lg:px-24">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-5">
+<span class="font-label text-sm uppercase tracking-[0.15em] text-secondary block mb-4">Section B</span>
+<h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mb-6">In progress</h2>
+<p class="font-body text-on-surface-variant leading-[1.6]">
+                    Ongoing experiments, thesis chapters, or industry collaborations you are allowed to discuss publicly.
+                </p>
+</div>
+<div class="lg:col-span-7 space-y-6">
+<div class="bg-surface-container-high p-8">
+<h4 class="font-headline font-semibold text-lg text-on-surface mb-2">Active project name</h4>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">Status and next milestones (placeholder).</p>
+</div>
+<div class="bg-surface-container-high p-8">
+<h4 class="font-headline font-semibold text-lg text-on-surface mb-2">Second workstream</h4>
+<p class="font-body text-on-surface-variant text-sm leading-relaxed">Replace with your content.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- EDIT: Tools & methods — chips and image -->
+<section class="bg-surface-container-low w-full py-20 px-8 md:px-16 lg:px-24">
+<div class="max-w-7xl mx-auto">
+<span class="font-label text-sm uppercase tracking-[0.15em] text-secondary block mb-4">Section C</span>
+<h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mb-8">Tools &amp; methods</h2>
+<div class="flex flex-wrap gap-2 mb-12">
+<span class="bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold">FEA</span>
+<span class="bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold">CFD</span>
+<span class="bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold">MATLAB</span>
+<span class="bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold">PYTHON</span>
+</div>
+<div class="bg-surface-container-high relative overflow-hidden min-h-[240px]">
+<!-- EDIT: image — replace src and alt (optional hero image for research) -->
+<img alt="Research lab or instrumentation placeholder" class="w-full h-full min-h-[240px] object-cover opacity-90 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRPuVzgMmFV231GuoTYXkKH2uN9Ci6zJpsn-l2Lzc4bjvFzjwtBs1l-ttLjpG4dlvkvEG02oj-V3a7xK-cspyuFbCSVae-8_wHFpH-nWBtG9E2YivXA8Vfp6YIF0HRf9DYZM7Q2KEL6ni0DVI384tHn1tssY8_-Hyn008ttVPDPts4gTov3yIof7qA7o-44LRiHqRUoSBZlU1l1OiSBdfs6P5K3FYpUolv0LCp49B-n5wdLJ8qu1A81lBoE3tiWyUgP4eYWP8Aqzs"/>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-dim w-full px-12 py-16 flex flex-col md:flex-row justify-between items-start">
+<div class="mb-12 md:mb-0">
+<div class="text-sm font-bold text-on-surface font-headline tracking-[0.2em] uppercase mb-4">TAYLOR_VICENTE</div>
+<div class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant">©2026 TAYLOR VICENTE // ALL RIGHTS RESERVED</div>
+</div>
+<div class="flex flex-col space-y-4 md:items-end">
+<!-- EDIT: footer social URLs -->
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">LINKEDIN</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">GITHUB</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">INSTITUTE_OF_MECHANICAL_ENGINEERS</a>
+</div>
+</footer>
+<script>
+(function () {
+  var toggle = document.getElementById('nav-toggle');
+  var menu = document.getElementById('mobile-menu');
+  if (!toggle || !menu) return;
+  toggle.addEventListener('click', function () {
+    menu.classList.toggle('hidden');
+    var isOpen = !menu.classList.contains('hidden');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  });
+})();
+</script>
+</body>
+</html>
