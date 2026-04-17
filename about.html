@@ -10,13 +10,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!--
-  PORTFOLIO_CONFIG (edit values here; search the repo for this block)
-  display_name: Taylor Vicente
-  contact_email: taylorvicent03@gmain.com
-  social_linkedin: https://www.linkedin.com/in/taylorvicente/
-  social_github: https://github.com/tvicent
--->
+<!-- Identity + social links: edit js/portfolio-config.js (applied by js/apply-portfolio.js). -->
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -102,7 +96,7 @@
 <!-- TopNavBar: active = ABOUT -->
 <nav class="bg-surface/80 backdrop-blur-[24px] top-0 z-50 flex flex-col w-full max-w-full sticky">
 <div class="flex justify-between items-center w-full px-8 py-6">
-<a class="text-xl font-bold tracking-[0.2em] text-on-surface font-headline uppercase shrink-0" href="index.html">TAYLOR_VICENTE</a>
+<a class="text-xl font-bold tracking-[0.2em] text-on-surface font-headline uppercase shrink-0" data-pf="nav_brand" href="index.html">TAYLOR_VICENTE</a>
 <div class="hidden md:flex items-center space-x-12">
 <a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface transition-colors hover:bg-surface-variant/50 px-3 py-2" href="index.html#projects">PROJECTS</a>
 <a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface transition-colors hover:bg-surface-variant/50 px-3 py-2" href="research.html">RESEARCH</a>
@@ -170,15 +164,15 @@
 </div>
 </div>
 </section>
-<!-- EDIT: contact — email mailto and links; PORTFOLIO_CONFIG email -->
+<!-- EDIT: contact — email comes from js/portfolio-config.js -->
 <section id="contact" class="bg-surface-container-low w-full py-20 px-8 md:px-16 lg:px-24 scroll-mt-28">
 <div class="max-w-3xl mx-auto">
 <span class="font-label text-sm uppercase tracking-[0.15em] text-secondary block mb-4">Contact</span>
 <h2 class="font-headline text-2xl md:text-3xl font-bold text-on-surface mb-6">Work with me</h2>
 <p class="font-body text-on-surface-variant leading-[1.6] mb-8">
-                For collaborations, speaking, or hiring inquiries, reach out by email. Update the mailto address to match PORTFOLIO_CONFIG at the top of this file.
+                For collaborations, speaking, or hiring inquiries, reach out by email.
             </p>
-<a class="inline-flex bg-gradient-cta text-on-primary font-headline text-sm uppercase tracking-[0.1em] font-bold px-8 py-4 hover:opacity-90 transition-opacity mb-10" href="mailto:your.email@example.com">your.email@example.com</a>
+<a class="inline-flex bg-gradient-cta text-on-primary font-headline text-sm uppercase tracking-[0.1em] font-bold px-8 py-4 hover:opacity-90 transition-opacity mb-10" data-pf="contact_email" href="#">…</a>
 <div class="flex flex-col gap-4">
 <a class="ghost-border text-on-surface font-headline text-xs uppercase tracking-[0.15em] font-bold px-6 py-3 inline-flex w-fit items-center gap-2 hover:bg-surface-container-lowest transition-colors" href="#">Download CV (PDF)</a>
 <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Set href on the CV link when your file is hosted (e.g. same repo under /assets/cv.pdf).</p>
@@ -188,16 +182,18 @@
 </main>
 <footer class="bg-surface-dim w-full px-12 py-16 flex flex-col md:flex-row justify-between items-start">
 <div class="mb-12 md:mb-0">
-<div class="text-sm font-bold text-on-surface font-headline tracking-[0.2em] uppercase mb-4">TAYLOR_VICENTE</div>
-<div class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant">©2026 TAYLOR VICENTE // ALL RIGHTS RESERVED</div>
+<div class="text-sm font-bold text-on-surface font-headline tracking-[0.2em] uppercase mb-4" data-pf="nav_brand">TAYLOR_VICENTE</div>
+<div class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant" data-pf="copyright">©2026 TAYLOR VICENTE // ALL RIGHTS RESERVED</div>
 </div>
 <div class="flex flex-col space-y-4 md:items-end">
 <!-- EDIT: footer social URLs -->
-<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">LINKEDIN</a>
-<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">GITHUB</a>
-<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">INSTITUTE_OF_MECHANICAL_ENGINEERS</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" data-pf="social_linkedin" href="#" rel="noopener noreferrer" target="_blank">LINKEDIN</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" data-pf="social_github" href="#" rel="noopener noreferrer" target="_blank">GITHUB</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" data-pf="social_extra" href="#">INSTITUTE_OF_MECHANICAL_ENGINEERS</a>
 </div>
 </footer>
+<script src="js/portfolio-config.js"></script>
+<script src="js/apply-portfolio.js"></script>
 <script>
 (function () {
   var toggle = document.getElementById('nav-toggle');

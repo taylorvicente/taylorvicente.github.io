@@ -4,19 +4,13 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- EDIT: site title and meta description (add <meta name="description" content="..."> for search & sharing) -->
-<title>Precision Engineering Portfolio</title>
+<title>Engineering Portfolio</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!--
-  PORTFOLIO_CONFIG (edit values here; search the repo for this block)
-  display_name: Taylor Vicente
-  contact_email: taylorvicent03@gmain.com
-  social_linkedin: https://www.linkedin.com/in/taylorvicente/
-  social_github: https://github.com/tvicent
--->
+<!-- Identity + social links: edit js/portfolio-config.js (applied by js/apply-portfolio.js). -->
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -108,7 +102,7 @@
 <!-- TopNavBar: active page = PROJECTS (this file) -->
 <nav class="bg-surface/80 backdrop-blur-[24px] top-0 z-50 flex flex-col w-full max-w-full sticky">
 <div class="flex justify-between items-center w-full px-8 py-6">
-<a class="text-xl font-bold tracking-[0.2em] text-on-surface font-headline uppercase shrink-0" href="index.html">TAYLOR_VICENTE</a>
+<a class="text-xl font-bold tracking-[0.2em] text-on-surface font-headline uppercase shrink-0" data-pf="nav_brand" href="index.html">TAYLOR_VICENTE</a>
 <div class="hidden md:flex items-center space-x-12">
 <a class="font-headline tracking-tighter uppercase font-bold text-on-surface border-b-2 border-on-surface pb-1 opacity-70 transition-opacity duration-150" href="index.html#projects">PROJECTS</a>
 <a class="font-headline tracking-tighter uppercase font-bold text-outline hover:text-on-surface transition-colors hover:bg-surface-variant/50 px-3 py-2" href="research.html">RESEARCH</a>
@@ -253,19 +247,21 @@
 <!-- EDIT: footer — brand line, copyright year, social URLs -->
 <footer class="bg-surface-dim w-full px-12 py-16 flex flex-col md:flex-row justify-between items-start tonal-shift via-surface-dim flat no-shadows full-width border-none">
 <div class="mb-12 md:mb-0">
-<div class="text-sm font-bold text-on-surface font-headline tracking-[0.2em] uppercase mb-4">
+<div class="text-sm font-bold text-on-surface font-headline tracking-[0.2em] uppercase mb-4" data-pf="nav_brand">
                 TAYLOR_VICENTE
             </div>
-<div class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant">
+<div class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant" data-pf="copyright">
                 ©2026 TAYLOR VICENTE // ALL RIGHTS RESERVED
             </div>
 </div>
 <div class="flex flex-col space-y-4 md:items-end">
-<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">LINKEDIN</a>
-<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">GITHUB</a>
-<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">INSTITUTE_OF_MECHANICAL_ENGINEERS</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" data-pf="social_linkedin" href="#" rel="noopener noreferrer" target="_blank">LINKEDIN</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" data-pf="social_github" href="#" rel="noopener noreferrer" target="_blank">GITHUB</a>
+<a class="font-inter text-[10px] tracking-widest uppercase text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" data-pf="social_extra" href="#">INSTITUTE_OF_MECHANICAL_ENGINEERS</a>
 </div>
 </footer>
+<script src="js/portfolio-config.js"></script>
+<script src="js/apply-portfolio.js"></script>
 <script>
 (function () {
   var toggle = document.getElementById('nav-toggle');
