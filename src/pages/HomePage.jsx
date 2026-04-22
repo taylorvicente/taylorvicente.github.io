@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 
+const toiletCaddyImage = new URL("../../Tablet_Holder_Black_Render.png", import.meta.url).href;
+const trackProjectImage = new URL("../../Version 2 - Black Header w/Logo - PNG.png", import.meta.url).href;
+const headshotImage = "";
+
 export default function HomePage() {
   return (
     <>
@@ -10,35 +14,50 @@ export default function HomePage() {
           <div className="col-span-1 border-r border-outline hidden lg:block"></div>
         </div>
         <div className="relative z-10 max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center w-full">
-          <div className="md:col-span-8 lg:col-span-9 md:col-start-3">
-          <div className="font-label text-sm uppercase tracking-[0.15em] text-secondary mb-6 flex items-center gap-4">
-            <span className="w-12 h-px bg-secondary"></span>
-            Mechanical &amp; Computer Engineering
+          <div className="md:col-span-8 lg:col-span-8 md:col-start-3">
+            <div className="font-label text-sm uppercase tracking-[0.15em] text-secondary mb-6 flex items-center gap-4">
+              <span className="w-12 h-px bg-secondary"></span>
+              Mechanical &amp; Computer Engineering
+            </div>
+            <h1 className="font-headline text-[3rem] md:text-[4rem] lg:text-[5rem] leading-[1.1] tracking-[-0.02em] font-bold text-on-surface mb-8">
+              Multi-Disciplinary Engineering <br />
+              <span className="text-primary">&amp; Mechanical Design</span>
+            </h1>
+            <p className="font-body text-lg text-on-surface-variant max-w-2xl leading-[1.6] mb-12">
+              Hi, I&apos;m Taylor. I&apos;m a fourth year at Purdue University studying Mechanical Engineering with a
+              minor in Computer Engineering. I&apos;m passionate about making things from concept to reality across
+              mechanical, electrical, and software engineering.
+            </p>
+            <div className="flex flex-wrap gap-6">
+              <a
+                className="bg-gradient-cta text-on-primary font-headline text-sm uppercase tracking-[0.1em] font-bold px-8 py-4 inline-flex items-center gap-3 hover:opacity-90 transition-opacity"
+                href="#projects"
+              >
+                View Projects
+              </a>
+              <Link
+                className="ghost-border text-on-surface font-headline text-sm uppercase tracking-[0.1em] font-bold px-8 py-4 inline-flex items-center gap-3 hover:bg-surface-container-low transition-colors"
+                to="/about"
+              >
+                Technical Resume
+              </Link>
+            </div>
           </div>
-          <h1 className="font-headline text-[3rem] md:text-[4rem] lg:text-[5rem] leading-[1.1] tracking-[-0.02em] font-bold text-on-surface mb-8">
-            Multi-Disciplinary Engineering <br />
-            <span className="text-primary">&amp; Mechanical Design</span>
-          </h1>
-          <p className="font-body text-lg text-on-surface-variant max-w-2xl leading-[1.6] mb-12">
-            Hi, I&apos;m Taylor. I&apos;m a fourth year at Purdue University studying Mechanical Engineering with a
-            minor in Computer Engineering. I&apos;m passionate about making things from concept to reality across
-            mechanical, electrical, and software engineering.
-          </p>
-          <div className="flex flex-wrap gap-6">
-            <a
-              className="bg-gradient-cta text-on-primary font-headline text-sm uppercase tracking-[0.1em] font-bold px-8 py-4 inline-flex items-center gap-3 hover:opacity-90 transition-opacity"
-              href="#projects"
-            >
-              View Projects
-            </a>
-            <Link
-              className="ghost-border text-on-surface font-headline text-sm uppercase tracking-[0.1em] font-bold px-8 py-4 inline-flex items-center gap-3 hover:bg-surface-container-low transition-colors"
-              to="/about"
-            >
-              Technical Resume
-            </Link>
+          <div className="md:col-span-4 lg:col-span-3 md:col-start-10">
+            <div className="bg-surface-container-lowest ambient-shadow p-4">
+              <div className="aspect-[3/4] bg-surface-container-high border border-outline/20 flex items-center justify-center overflow-hidden">
+                {headshotImage ? (
+                  <img src={headshotImage} alt="Taylor Vicente headshot" className="w-full h-full object-cover" />
+                ) : (
+                  <span className="font-label text-[10px] tracking-widest uppercase text-on-surface-variant text-center px-4">
+                    Add headshot image in
+                    <br />
+                    <code>src/pages/HomePage.jsx</code>
+                  </span>
+                )}
+              </div>
+            </div>
           </div>
-        </div>
         </div>
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/3 h-[120%] bg-surface-container-low -z-10 skew-x-[-15deg] hidden lg:block border-l border-outline/20"></div>
       </section>
@@ -59,6 +78,7 @@ export default function HomePage() {
                   <div className="flex flex-wrap gap-2 mb-6">
                     <span className="bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold">Product Design</span>
                     <span className="bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold">CAD</span>
+                    <span className="bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold">Entrepreneurship</span>
                   </div>
                   <h3 className="font-headline text-3xl font-bold text-on-surface mb-4">Toilet Caddy</h3>
                   <p className="font-body text-on-surface-variant leading-[1.6] mb-8 text-lg">
@@ -70,7 +90,7 @@ export default function HomePage() {
                   <img
                     alt="Toilet Caddy Assembly"
                     className="w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:opacity-100 group-hover:mix-blend-normal transition-all duration-700"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJT0FqJIlDbmXyU7zfz_5SMVbCihQC6A9YYygoNE1krfY0jGrMxizoADjD-2JIl8ND7x6W9o70iJD6UwBGtlCf6P9fATBT_LbjnJ1KiadJgw08yagNuYAkQniWL63NPjBPxfI5sGhw6Vz9Pt_II1icbIlJ3YjmomHh99RtTzXyS6x9qP7Iax18uzmE7Eamfq1H9cFdujilzwTEDcn1T2ekyvxhAf357NJaFYw_42n-A3SkyQX2cxZX1cl-Zutsk3wA-CosI7OdiHI"
+                    src={toiletCaddyImage}
                   />
                 </div>
               </div>
@@ -79,21 +99,20 @@ export default function HomePage() {
             <article className="lg:col-span-5 bg-surface-container-lowest ambient-shadow p-10 flex flex-col h-[500px] relative group overflow-hidden">
               <div className="absolute inset-0 bg-surface-container-high -z-10">
                 <img
-                  alt="Mechanical turbine rendering"
+                  alt="Track - Smart Expenditure Tracking Logo"
                   className="w-full h-full object-cover mix-blend-multiply opacity-20 group-hover:opacity-40 transition-opacity duration-500"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmDF2xoP-X9mUBt8LnzcVXfLtyLE10PkQim90Id4qEL-vnQAhUNevEpd-AdaLq41NrKrSxrDige-gzsslrasou_K_ehrsnC3R4GQAFftBDagV0GW03N_scPDyg0YGAu3bZI6AO06MxnilXL22hfQXmj4Mg_6wo-AMh2f-pKEgosWFrbLAAgKWds1ZiQer5xgsYRvYKUJrlTbVqtCtIgdj0aZEQ6EfBELb3SR7Jz0j8_n2ZPHgRIgX8njcjWmDU-vl53Ax6UkqPiDA"
+                  src={trackProjectImage}
                 />
               </div>
               <div className="flex flex-wrap gap-2 mb-8 relative z-10">
-                <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">THERMAL</span>
-                <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">CAD</span>
+                <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">Entrepreneurship</span>
+                <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">Software Development</span>
               </div>
               <h3 className="font-headline text-2xl font-bold text-on-surface mb-4 relative z-10">
-                High-Bypass Turbofan Stress Analysis
+                Track - Smart Expenditure Tracking
               </h3>
               <p className="font-body text-on-surface-variant leading-[1.6] relative z-10">
-                Finite Element Analysis (FEA) and computational fluid dynamics (CFD) modeling to optimize the
-                structural integrity of titanium fan blades under extreme thermal loads.
+              163 Million Americans have a self-identified over-spending problem. Commonly, this comes down to a lack of actionable information about our own spending behaviors. Track seeks to solve this problem by providing itemized purchasing information to granularly track expenses and create hyper-personalized budgets.
               </p>
             </article>
 
