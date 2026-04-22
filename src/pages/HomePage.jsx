@@ -48,7 +48,7 @@ export default function HomePage() {
           <div className="mb-24 md:pl-24">
             <span className="font-label text-sm uppercase tracking-[0.15em] text-secondary block mb-4">01 // Projects</span>
             <h2 className="font-headline text-3xl md:text-4xl tracking-tight font-bold text-on-surface">
-              Systems Architecture &amp; <br /> Applied Mechanics
+              Mechanical, Electrical, &amp; <br /> Software
             </h2>
           </div>
 
