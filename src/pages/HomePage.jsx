@@ -122,6 +122,7 @@ export default function HomePage() {
                   <div className="flex flex-wrap gap-2 mb-4">
                     <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">SystemVerilog</span>
                     <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">FPGA</span>
+                    <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">Sequential &amp; Combinational Logic</span>
                   </div>
                   <h3 className="font-headline text-xl font-bold text-on-surface mb-3">Simulated Lunar Lander</h3>
                   <p className="font-body text-on-surface-variant leading-[1.6] text-sm">
