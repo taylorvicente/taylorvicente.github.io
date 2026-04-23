@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const toiletCaddyImage = new URL("../../Tablet_Holder_Black_Render.png", import.meta.url).href;
 const trackProjectImage = new URL("../../Version 2 - Black Header w/Logo - PNG.png", import.meta.url).href;
-const headshotImage = "";
+const headshotImage = new URL("../../headshot.png", import.meta.url).href;
 
 export default function HomePage() {
   return (
