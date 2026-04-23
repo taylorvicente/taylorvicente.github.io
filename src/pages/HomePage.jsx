@@ -120,12 +120,13 @@ export default function HomePage() {
               <article className="bg-surface-container-lowest ambient-shadow p-10 flex flex-col md:flex-row gap-8 items-center relative overflow-hidden group">
                 <div className="flex-1 order-2 md:order-1 relative z-10">
                   <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">PCB DESIGN</span>
+                    <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">SystemVerilog</span>
+                    <span className="bg-surface text-on-surface font-label text-xs uppercase tracking-widest px-3 py-1 font-semibold border border-outline/20">FPGA</span>
                   </div>
-                  <h3 className="font-headline text-xl font-bold text-on-surface mb-3">Modular Telemetry Board</h3>
+                  <h3 className="font-headline text-xl font-bold text-on-surface mb-3">Simulated Lunar Lander</h3>
                   <p className="font-body text-on-surface-variant leading-[1.6] text-sm">
-                    Custom 6-layer PCB integrating high-frequency RF transmission and analog sensor conditioning for
-                    remote structural monitoring.
+                    Implemented a real-time lunar lander simulation using SystemVerilog on an FPGA. The simulation
+                    implements a finite state machine architecture used to handle gravity constants, thrust vectors, and fuel depletion logic. 
                   </p>
                 </div>
               </article>
