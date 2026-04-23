@@ -13,8 +13,8 @@ export default function HomePage() {
           <div className="col-span-1 border-r border-outline hidden md:block"></div>
           <div className="col-span-1 border-r border-outline hidden lg:block"></div>
         </div>
-        <div className="relative z-10 max-w-5xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center w-full">
-          <div className="md:col-span-8 lg:col-span-8 md:col-start-3">
+        <div className="relative z-10 max-w-7xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center w-full">
+          <div className="md:col-span-7 lg:col-span-6 md:col-start-1">
             <div className="font-label text-sm uppercase tracking-[0.15em] text-secondary mb-6 flex items-center gap-4">
               <span className="w-12 h-px bg-secondary"></span>
               Mechanical &amp; Computer Engineering
@@ -43,8 +43,8 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="md:col-span-4 lg:col-span-3 md:col-start-10">
-            <div className="bg-surface-container-lowest ambient-shadow p-4">
+          <div className="md:col-span-5 lg:col-span-6 md:col-start-8">
+            <div className="bg-surface-container-lowest ambient-shadow p-4 w-full max-w-[56rem]">
               <div className="aspect-[3/4] bg-surface-container-high border border-outline/20 flex items-center justify-center overflow-hidden">
                 {headshotImage ? (
                   <img src={headshotImage} alt="Taylor Vicente headshot" className="w-full h-full object-cover" />
