@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 const toiletCaddyImage = new URL("../../Tablet_Holder_Black_Render.png", import.meta.url).href;
 const trackProjectImage = new URL("../../Version 2 - Black Header w/Logo - PNG.png", import.meta.url).href;
 const headshotImage = new URL("../../headshot.png", import.meta.url).href;
+const lunarLanderVideo = new URL("../../lunarlander.mp4", import.meta.url).href;
 
 export default function HomePage() {
   return (
@@ -129,6 +130,18 @@ export default function HomePage() {
                     Implemented a real-time lunar lander simulation using SystemVerilog on an FPGA. The simulation
                     implements a finite state machine architecture used to handle gravity constants, thrust vectors, and fuel depletion logic. 
                   </p>
+                </div>
+                <div className="w-full md:w-[320px] lg:w-[360px] order-1 md:order-2 relative z-10">
+                  <video
+                    className="w-full aspect-video object-cover border border-outline/20 bg-black"
+                    src={lunarLanderVideo}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    controls
+                  />
                 </div>
               </article>
 
