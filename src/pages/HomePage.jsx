@@ -43,8 +43,8 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="md:col-span-5 lg:col-span-6 md:col-start-8">
-            <div className="bg-surface-container-lowest ambient-shadow p-4 w-full max-w-[56rem]">
+          <div className="md:col-span-4 lg:col-span-3 md:col-start-10">
+            <div className="bg-surface-container-lowest ambient-shadow p-4">
               <div className="aspect-[3/4] bg-surface-container-high border border-outline/20 flex items-center justify-center overflow-hidden">
                 {headshotImage ? (
                   <img src={headshotImage} alt="Taylor Vicente headshot" className="w-full h-full object-cover" />
